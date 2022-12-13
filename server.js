@@ -12,7 +12,16 @@ app.use(express.static('public'));
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
+
+// gets index page
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
+// gets note page
+app.get("/notes", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
 
 //Listen 
 app.listen(PORT, () =>
