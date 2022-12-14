@@ -27,7 +27,11 @@ app.get("/notes", function (req, res) {
   res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
 
-  // This get request at /api/notes is used to retrieve the contents of the db.json file
+
+
+
+//|GET REQUEST|
+// This route serves as an endpoint to retrieve the contents of the db.json file.
   app.get("/api/notes", function (req, res) {
     let getNotes = fs.readFileSync('db/db.json')
     getNotes = JSON.parse(getNotes);
@@ -35,10 +39,9 @@ app.get("/notes", function (req, res) {
     res.json(getNotes);
   });
 
-
-// Post request
+//|POST REQUEST|
+// This route serves as an endpoint to create new notes. The route reads the current list of notes from the db.json file, adds the new note, and then writes the updated list of notes back to the file.
   app.post('/api/notes/', (req, res) => {
-    // get all currently saved notes:
     let getNotes = fs.readFileSync('db/db.json')
     getNotes = JSON.parse(getNotes);
     //Create a body for the note
@@ -53,6 +56,22 @@ app.get("/notes", function (req, res) {
     fs.writeFileSync('db/db.json', JSON.stringify(getNotes));
     res.json(getNotes);
   });
+
+
+//|DELETE REQUEST|
+//This route serves as an endpoint to delete a specific note from the application. It reads the current list of notes from the db.json file, removes the specified note based on id, and then writes the updated list of notes back to the file.
+  app.delete('/api/notes/:id', (req, res) => {
+    // reading notes form db.json
+    let getNotes = fs.readFileSync('db/db.json')
+    getNotes = JSON.parse(getNotes);
+    // removing note with id param
+    let deleteNote = getNotes.filter(noteId => noteId.id !== req.params.id);
+    // Rewriting note to db.json
+    fs.writeFileSync('db/db.json', JSON.stringify(deleteNote));
+    res.json(deleteNote);
+    
+  })
+
 
 //Listen 
 app.listen(PORT, () =>
