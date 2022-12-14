@@ -13,21 +13,21 @@ This note taker app is used to write, save and delete a users notes. The Applica
 * [Questions](#questions)
 
 ## Installation
-If you want to run a copy of this app on your local machine, first clone the repository:
+If you want to run a copy of this app on your local machine, first clone the repository:  
 
-Clone Via HTTPS:
+Clone Via HTTPS:  
 ```$ git clone https://github.com/Steven-McCombe/MultiNoteApp.git```
 
-Clone Via SSH:
+Clone Via SSH:  
 ```$ git clone git@github.com:Steven-McCombe/MultiNoteApp.git```
 
-Cd/ into the cloned directory and install the dependencies by typing the following into the command line
+Cd/ into the cloned directory and install the dependencies by typing the following into the command line:  
 ```$ npm install --save```
 
-To start the application type the following into the address bar
+To start the application type the following into the address bar:  
 ```$ node server.js```
 
-Navigate to the below address in your browser
+Navigate to the below address in your browser:  
 ```localhost:3005```
 
 ## Links
