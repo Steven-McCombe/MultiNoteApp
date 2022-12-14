@@ -1,7 +1,7 @@
 # MultiNoteApp
 
 ## Description
-This note taker app is used to write, save and delete a users notes. The Application is deployed on Heroku and uses Express.js back end.
+This application is a note-taking tool built using the Express library in Node.js. It allows users to save, view, and delete notes that they enter. To use the application, the user can click the button on the landing page, which will take them to a page where they can enter notes. The user can then give the note a title, enter the text of the note, and save it. Previous notes can be viewed on the left side of the screen and can be deleted by clicking on the trash can icon next to each note. To view a note the user can click on the note's title. 
 
 ## Table of Contents
 * [Installation](#installation)
