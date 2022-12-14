@@ -5,6 +5,7 @@ This note taker app is used to write, save and delete a users notes. The Applica
 
 ## Table of Contents
 * [Installation](#installation)
+* [Links](#Links)
 * [Usage](#usage)
 * [License](#license)
 * [Contribute](#contribute)
@@ -12,13 +13,29 @@ This note taker app is used to write, save and delete a users notes. The Applica
 * [Questions](#questions)
 
 ## Installation
-`$npm i` 
+If you want to run a copy of this app on your local machine, first clone the repository:
 
+Clone Via HTTPS:
+```$ git clone https://github.com/Steven-McCombe/MultiNoteApp.git```
+
+Clone Via SSH:
+```$ git clone git@github.com:Steven-McCombe/MultiNoteApp.git```
+
+Cd/ into the cloned directory and install the dependencies by typing the following into the command line
+```$ npm install --save```
+
+To start the application type the following into the address bar
+```$ node server.js```
+
+Navigate to the below address in your browser
+```localhost:3005```
+
+## Links
+[Link to the Deployed Application](https://vast-taiga-79786.herokuapp.com)
 ## Usage
+Video Demonstration (click image):
 
-Click on the image below to watch a video on how to use the app:
-
-[<img src="./public/assets/images/Application_Screenshot.png" width="50%">](https://watch.screencastify.com/v/EDhBGtwSEtfvfi7BRPxW )
+[<img src="./public/assets/images/Application_Screenshot.png">](https://watch.screencastify.com/v/EDhBGtwSEtfvfi7BRPxW )
 
 ## License 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
